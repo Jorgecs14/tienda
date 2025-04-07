@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#botonProductos {
+  background: #9b77a4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 55px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 10px 10px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#botonProductos:hover {
+  background: #f0f0f0;
+  color: #9b77a4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
