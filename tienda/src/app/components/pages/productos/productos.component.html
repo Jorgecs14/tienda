@@ -1,10 +1,8 @@
-<section>
-  <a routerLink="/productos/ver-producto"
-    ><button id="botonProductos">Ver producto</button></a
-  >
-  <a routerLink="/productos/editar-producto">
-    <button id="botonProductos">Editar producto</button></a
-  ><a routerLink="/productos/crear-producto"
-    ><button id="botonProductos">Crear producto</button></a
-  >
-</section>
+<p>productos works!</p>
+
+@for(producto of productos; track producto) {
+<p>Hola desde productos {{ producto }}</p>
+} @for(esteProducto of estosSiSonProductos; track esteProducto.id) {
+<p>Hola desde productos {{ esteProducto.nombre }}</p>
+}
+<button (click)="addData()">MAAS PRODUCTOS POR FAVOR!!</button>

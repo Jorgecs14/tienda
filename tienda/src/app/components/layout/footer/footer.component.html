@@ -1,1 +1,35 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+      <span>Mi Tienda</span>
+    </div>
+    <nav class="nav" aria-label="Menú de navegación del pie de página">
+      <div class="nav-links">
+        <a routerLink="/acerca" aria-label="Acerca de nosotros">
+          <lucide-icon name="info" size="18"></lucide-icon> Acerca
+        </a>
+        <a routerLink="/contacto" aria-label="Contacto">
+          <lucide-icon name="phone" size="18"></lucide-icon> Contacto
+        </a>
+        <a
+          routerLink="/politica-privacidad"
+          aria-label="Política de privacidad"
+        >
+          <lucide-icon name="shield" size="18"></lucide-icon> Privacidad
+        </a>
+      </div>
+    </nav>
+    <div class="social-media">
+      <a href="https://facebook.com" aria-label="Facebook">
+        <lucide-icon name="facebook" size="18"></lucide-icon>
+      </a>
+      <a href="https://twitter.com" aria-label="Twitter">
+        <lucide-icon name="twitter" size="18"></lucide-icon>
+      </a>
+      <a href="https://instagram.com" aria-label="Instagram">
+        <lucide-icon name="instagram" size="18"></lucide-icon>
+      </a>
+    </div>
+  </div>
+</footer>

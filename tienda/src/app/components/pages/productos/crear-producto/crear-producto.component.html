@@ -1,1 +1,45 @@
-<p>crear-producto works!</p>
+<form
+  [formGroup]="producto"
+  (ngSubmit)="createProducto()"
+  enctype="multipart/form-data"
+>
+  <div>
+    <label for="descripcion">Descripción</label>
+    <textarea id="descripcion" formControlName="descripcion"></textarea>
+  </div>
+
+  <div>
+    <label for="precio">Precio</label>
+    <input
+      id="precio"
+      type="number"
+      formControlName="precio"
+      required="number"
+    />
+  </div>
+
+  <div>
+    <label for="stock">Stock</label>
+    <input id="stock" type="number" formControlName="stock" />
+  </div>
+
+  <div>
+    <label for="categoria">Categoría</label>
+    <input id="categoria" type="text" formControlName="categoria" />
+  </div>
+
+  <div>
+    <label for="imagen">Imagen</label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+  </div>
+
+  @if (previewUrl) {
+  <div>
+    <p>Previsualización:</p>
+    <img [src]="previewUrl" alt="Vista previa de imagen" width="200" />
+  </div>
+  }
+
+  <button type="submit">Crear producto</button>
+</form>
+<hr />

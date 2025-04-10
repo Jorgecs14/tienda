@@ -1,0 +1,126 @@
+/* Estilo del pie de página */
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  margin-top: 40px;
+}
+
+/* Contenedor del pie de página */
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Estilo del logo en el pie de página */
+.footer .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.footer .logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Estilo para los enlaces de navegación del pie */
+.footer .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer .nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+/* Efecto hover para los enlaces */
+.footer .nav-links a:hover {
+  color: #007bff;
+}
+
+/* Estilo para los íconos sociales */
+.footer .social-media {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Estilo para los íconos sociales */
+.footer .social-media a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.footer .social-media a:hover {
+  color: #007bff;
+}
+
+/* Responsividad: Pantallas más pequeñas */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Apilar los enlaces en pantallas pequeñas */
+  .footer .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .footer .logo {
+    font-size: 18px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer .nav-links a {
+    font-size: 16px;
+  }
+
+  /* Íconos sociales más pequeños */
+  .footer .social-media a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .footer .logo {
+    font-size: 16px;
+  }
+
+  .footer .nav-links a {
+    font-size: 14px;
+  }
+
+  .footer .social-media a {
+    font-size: 14px;
+  }
+
+  .footer .container {
+    padding: 0 15px;
+  }
+}

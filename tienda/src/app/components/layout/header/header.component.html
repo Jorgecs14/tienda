@@ -1,1 +1,31 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+      <span>Mi Tienda</span>
+    </div>
+    <nav [class.active]="menuOpen" class="nav" aria-label="Menú de navegación">
+      <div class="nav-links">
+        <a routerLink="/crear-producto" aria-label="Crear producto">
+          <lucide-icon name="plus-circle" size="18"></lucide-icon> Crear
+        </a>
+        <a routerLink="/ver-productos" aria-label="Ver productos">
+          <lucide-icon name="eye" size="18"></lucide-icon> Ver
+        </a>
+        <a routerLink="/editar-producto" aria-label="Editar producto">
+          <lucide-icon name="edit" size="18"></lucide-icon> Editar
+        </a>
+      </div>
+    </nav>
+    <div>
+      <div class="user-links">
+        <a routerLink="/login" aria-label="Iniciar sesión">
+          <lucide-icon name="log-in" size="18"></lucide-icon> Login
+        </a>
+        <a routerLink="/perfil" aria-label="Ver perfil">
+          <lucide-icon name="user" size="18"></lucide-icon> Perfil
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

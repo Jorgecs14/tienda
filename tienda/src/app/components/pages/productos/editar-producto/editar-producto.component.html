@@ -1,1 +1,76 @@
-<p>editar-producto works!</p>
+<form
+  [formGroup]="productoForm"
+  (ngSubmit)="actualizarProducto()"
+  enctype="multipart/form-data"
+>
+  <div>
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" formControlName="nombre" />
+  </div>
+
+  <div>
+    <label for="descripcion">Descripción</label>
+    <textarea id="descripcion" formControlName="descripcion"></textarea>
+  </div>
+
+  <div>
+    <label for="precio">Precio</label>
+    <input id="precio" type="number" formControlName="precio" required />
+  </div>
+
+  <div>
+    <label for="stock">Stock</label>
+    <input id="stock" type="number" formControlName="stock" />
+  </div>
+
+  <div>
+    <label for="categoria">Categoría</label>
+    <input id="categoria" type="text" formControlName="categoria" />
+  </div>
+
+  <div>
+    <label for="imagen">Imagen</label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+  </div>
+
+  @if (previewUrl) {
+  <div>
+    <p>
+      {{
+        productoForm.value.imagen ? "Imagen seleccionada:" : "Imagen actual:"
+      }}
+    </p>
+    <img [src]="previewUrl" alt="Imagen del producto" width="200" />
+  </div>
+  }
+
+  <button type="submit" [disabled]="!productoSeleccionadoId">
+    Actualizar producto
+  </button>
+</form>
+
+<hr />
+
+<h2>Lista de productos</h2>
+@if (productos.length > 0) { @for (p of productos; track p.id) {
+<div class="producto">
+  <h3>{{ p.nombre }}</h3>
+  <p>{{ p.descripcion }}</p>
+  <p>Precio: {{ p.precio }} €</p>
+  <p>Stock: {{ p.stock }}</p>
+  <p>Categoría: {{ p.categoria }}</p>
+  @if (p.imagen) {
+  <img
+    [src]="'http://localhost:3000' + p.imagen"
+    alt="Imagen de {{ p.nombre }}"
+    width="200"
+  />
+  }
+  <div>
+    <button (click)="seleccionarProducto(p)">Editar</button>
+    <button (click)="eliminarProducto(p.id!)">Eliminar</button>
+  </div>
+</div>
+} } @else {
+<p>No hay productos registrados.</p>
+}
